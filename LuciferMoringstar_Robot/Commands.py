@@ -49,7 +49,7 @@ async def start(bot, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
+                                InlineKeyboardButton("🕶🕶 Join Updates Channel🎯🎯", url=invite_link.invite_link)
                             ],
                             [
                                 InlineKeyboardButton("🔄 Try Again", callback_data=f"checksub#{file_id}")
@@ -84,7 +84,7 @@ async def start(bot, message):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🕊️BOT GROUP🕊️', url="https://t.me/Adaarcinema")
+                        InlineKeyboardButton('🕊️BOT GROUP🕊️', url="https://t.me/CinemaFactoryGroup2")
                     ],
                     [
                         InlineKeyboardButton(' Search again ♂️', switch_inline_query_current_chat='')
@@ -118,8 +118,8 @@ async def start(bot, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("😎DEV😎", url="https://t.me/noufalpowerbot"),
-                        InlineKeyboardButton("♻️GROUP♻️", url="https://t.me/Adaarcinema")
+                        InlineKeyboardButton("😎DEV😎", url="https://t.me/KurupDQ"),
+                        InlineKeyboardButton("♻️GROUP♻️", url="https://t.me/CinemaFactoryGroup2")
                     ],
                     [
                         InlineKeyboardButton("🎭YOU NEED HELP🎭", callback_data="help"),
