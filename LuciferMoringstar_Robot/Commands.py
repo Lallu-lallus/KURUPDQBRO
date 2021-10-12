@@ -113,7 +113,7 @@ async def start(bot, message):
         )
     else:
         await message.reply_video(
-            video="https://telegra.ph/file/a036254e7ecad68502cd3.mp4",
+            video="https://telegra.ph/file/6f9fbb9266c5fc6695157.mp4",
             caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -122,7 +122,7 @@ async def start(bot, message):
                         InlineKeyboardButton("♻️GROUP♻️", url="https://t.me/CinemaFactoryGroup2")
                     ],
                     [
-                        InlineKeyboardButton("🎭YOU NEED HELP🎭", callback_data="help"),
+                        InlineKeyboardButton("🎭HELP🎭", callback_data="help"),
                         InlineKeyboardButton("🕶Search Here🎞", switch_inline_query_current_chat='')
                       ]
                     ]
