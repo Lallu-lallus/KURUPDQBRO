@@ -11,10 +11,10 @@ from .Channel import (
 )
 
 HELP = """
-നോകണ്ട ഉണ്ണി എറ്റ് നീ ഉദശിഷ ആൽ അല്ല
-[MOVIE VENNO](https://t.me/Adaarcinema)
+നോകണ്ട ഉണ്ണി എറ്റ് നീ ഉദശിഷ ആൽ അല്ല I AM A DIFFERENT BOT😎
+[MOVIE VENNO](https://t.me/CinemaFactoryGroup2)
 
-@Adaarcinema
+@CinemaFactoryGroup2
 """
 
 ABOUT = """
@@ -26,5 +26,5 @@ ABOUT = """
 
 ➥ Library : Pyrogram Asyncio 1.13.0
 
-➥ Source Code : [Click Me](https://t.me/AdhavaaBiriyaniKittiyalo)
+➥ Source Code :🔐
 """
