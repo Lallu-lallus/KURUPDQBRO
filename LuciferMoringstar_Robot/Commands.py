@@ -1,4 +1,6 @@
 import os
+import time
+import random
 import logging
 from pyrogram import Client, filters
 from pyrogram import StopPropagation
@@ -11,6 +13,13 @@ from LuciferMoringstar_Robot.Channel import handle_user_status
 from Database import Database
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
+
+PHOTO = [
+    "https://telegra.ph/file/aacf52dc306bf1133a48e.jpg",
+    "https://telegra.ph/file/53cf81d228da011475423.jpg",
+    "https://telegra.ph/file/6234ddea2cb9922802869.jpg",
+    "https://telegra.ph/file/078b6590b1a53e420af44.jpg"
+]
 
 LOG_CHANNEL = BROADCAST_CHANNEL
 
@@ -49,7 +58,7 @@ async def start(bot, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🕶🕶 Join Updates Channel🎯🎯", url=invite_link.invite_link)
+                                InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
                             ],
                             [
                                 InlineKeyboardButton("🔄 Try Again", callback_data=f"checksub#{file_id}")
@@ -84,10 +93,10 @@ async def start(bot, message):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🕊️BOT GROUP🕊️', url="https://t.me/CinemaFactoryGroup2")
+                        InlineKeyboardButton('♻️ Join Group ♻️', url='t.me/movies_fanda_official')
                     ],
                     [
-                        InlineKeyboardButton(' Search again ♂️', switch_inline_query_current_chat='')
+                        InlineKeyboardButton('🔍 Search again 🔎', switch_inline_query_current_chat='')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -112,22 +121,34 @@ async def start(bot, message):
             )
         )
     else:
-        await message.reply_video(
-            video="https://telegra.ph/file/6f9fbb9266c5fc6695157.mp4",
-            caption=START_MSG,
+        await message.reply_photo(
+            photo=f"{random.choice(PHOTO)}",
+            caption=START_MSG, 
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("😎DEV😎", url="https://t.me/KurupDQ"),
-                        InlineKeyboardButton("♻️GROUP♻️", url="https://t.me/CinemaFactoryGroup2")
+                        InlineKeyboardButton
+                            (
+                                "🔎Search Here", switch_inline_query_current_chat=''
+                            ),
+                        InlineKeyboardButton
+                            (
+                                "🔆 Main Channel🔆", url="https://t.me/movies_fanda_official"
+                            )
                     ],
                     [
-                        InlineKeyboardButton("🎭HELP🎭", callback_data="help"),
-                        InlineKeyboardButton("🕶Search Here🎞", switch_inline_query_current_chat='')
-                      ]
+                        InlineKeyboardButton
+                            (
+                                "⚙Help", callback_data="help"
+                            ),
+                        InlineKeyboardButton
+                            (
+                                "About😎", callback_data="about"
+                            )
                     ]
-                 )
-              )
+                ]
+            )
+        )
         StopPropagation
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
@@ -173,11 +194,8 @@ async def broadcast_handler_open(_, m):
 
 @Client.on_message(filters.private & filters.command("stats"))
 async def sts(c, m):
-    if m.from_user.id not in ADMIN_ID:
-        await m.delete()
-        return
     await m.reply_text(
-        text=f"**Total Users in Database 📂:** `{await db.total_users_count()}`\n\n**Total Users with Notification Enabled 🔔 :** `{await db.total_notif_users_count()}`",
+        text=f"**Total Users in Database 📂:** `{await db.total_users_count()}``",
         parse_mode="Markdown",
         quote=True
     )
@@ -336,7 +354,10 @@ async def delete(bot, message):
 async def bot_info(bot, message):
     buttons = [
         [
-            InlineKeyboardButton("SOURCE CODE😇", url="https://t.me/AdhavaaBiriyaniKittiyalo"),
+            InlineKeyboardButton
+                (
+                     '♻️ GROUP ♻️', url='t.me/Cinemafactorygroup2'
+                )
         ]
-        ]
+    ]
     await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
