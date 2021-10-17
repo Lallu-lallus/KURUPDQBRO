@@ -127,7 +127,7 @@ async def start(bot, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("➕ Add Me To Your Group ➕", url="https://t.me/NR_DQ_bot?startgroup=true")
+                        InlineKeyboardButton("➕ Add Me To Your Group ➕", url="https://t.me/KURUPDQBRO?startgroup=true")
                     ],
                     [
                         InlineKeyboardButton("🔍 Search Here", switch_inline_query_current_chat=''),
