@@ -121,30 +121,24 @@ async def start(bot, message):
             )
         )
     else:
-        await message.reply_photo(
+         await cmd.reply_photo(
             photo=f"{random.choice(PHOTO)}",
-            caption=START_MSG, 
+            caption=START_MSG,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton
-                            (
-                                "🔎Search Here", switch_inline_query_current_chat=''
-                            ),
-                        InlineKeyboardButton
-                            (
-                                "🔆 Main Channel🔆", url="https://t.me/movies_fanda_official"
-                            )
+                        InlineKeyboardButton("➕ Add Me To Your Group ➕", url="https://t.me/NR_DQ_bot?startgroup=true")
                     ],
                     [
-                        InlineKeyboardButton
-                            (
-                                "⚙Help", callback_data="help"
-                            ),
-                        InlineKeyboardButton
-                            (
-                                "About😎", callback_data="about"
-                            )
+                        InlineKeyboardButton("🔍 Search Here", switch_inline_query_current_chat=''),
+                        InlineKeyboardButton("😎 About", callback_data="about")
+                    ],
+                    [
+                        InlineKeyboardButton("Group", url="https://t.me/MovieFandaGroup"),
+                        InlineKeyboardButton("Dev", url="https://t.me/noufalpowerbot")
+                    ],
+                    [
+                        InlineKeyboardButton("❔ MAIN CHANNEL ❔", url="https://t.me/joinchat/ILle_V4Fqg00NWE1")
                     ]
                 ]
             )
