@@ -11,14 +11,14 @@ from .Channel import (
 )
 
 HELP = """
-നോകണ്ട ഉണ്ണി എറ്റ് നീ ഉദശിഷ ആൽ അല്ല I AM A DIFFERENT BOT😎
+നോകണ്ട ഉണ്ണി എറ്റ് നീ ഉദശിഷ ആൽ അല്ല I AM A DIFFERENT BOT😎 u know 
 [MOVIE VENNO](https://t.me/CinemaFactoryGroup2)
 
 @CinemaFactoryGroup2
 """
 
 ABOUT = """
-➥ Name :  Auto Filter With IMDB
+➥ Name :  Dulqer bot
     
 ➥ Creator : [Noufal](t.me/noufalpowerbot)
 
