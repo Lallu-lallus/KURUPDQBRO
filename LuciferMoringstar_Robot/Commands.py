@@ -126,28 +126,19 @@ async def start(bot, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton
-                            (
-                                "🔎Search Here", switch_inline_query_current_chat=''
-                            ),
-                        InlineKeyboardButton
-                            (
-                                "🔆 Main Channel🔆", url="https://t.me/movies_fanda_official"
-                            )
+                        InlineKeyboardButton("➕ Add Me To Your Group ➕", url="https://t.me/NR_Dq_bot?startgroup=true"
                     ],
                     [
-                        InlineKeyboardButton
-                            (
-                                "⚙Help", callback_data="help"
-                            ),
-                        InlineKeyboardButton
-                            (
-                                "About😎", callback_data="about"
-                            )
+                        InlineKeyboardButton("😎DEV😎", url="https://t.me/noufalpowerbot"),
+                        InlineKeyboardButton("♻️GROUP♻️", url="https://t.me/MovieFandaGroup")
+                    ],
+                    [
+                        InlineKeyboardButton("🎭HELP🎭", callback_data="help"),
+                        InlineKeyboardButton("🕶Search Here🎞", switch_inline_query_current_chat='')
+                      ]
                     ]
-                ]
-            )
-        )
+                 )
+              )
         StopPropagation
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
