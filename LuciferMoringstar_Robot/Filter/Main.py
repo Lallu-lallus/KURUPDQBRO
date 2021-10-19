@@ -70,7 +70,7 @@ async def filter(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("📞 Contact Admin", url='t.me/the_hellcat_10')
+                        InlineKeyboardButton("📞 Contact Admin", url='t.me/no_ufal')
                     ]
                 ]
             )
@@ -287,8 +287,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
         elif query.data == "help":
             buttons = [[
-                InlineKeyboardButton('Main Channel', url='t.me/SS7MOVIEHUT'),
-                InlineKeyboardButton('New Release', url='t.me/movie_hut_channel')
+                InlineKeyboardButton('Main Channel', url='t.me/movies_fanda_official'),
+                InlineKeyboardButton('New Release', url='t.me/movie_fanda_official')
                 ],[
                 InlineKeyboardButton('♻️ Join Group ♻️', url='t.me/SS07MOVIEHUT')
                 ]]
@@ -297,8 +297,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Main Channel', url='t.me/SS7MOVIEHUT'),
-                    InlineKeyboardButton('New Release', url='t.me/movie_hut_channel')
+                    InlineKeyboardButton('Main Channel', url='ht.me/movies_fanda_official'),
+                    InlineKeyboardButton('New Release', url='t.me/movies_fanda_official')
                 ]
                 ]
             await query.message.edit(text=f"{ABOUT}".format(TUTORIAL), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
@@ -321,8 +321,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('Join Group ♻️', url='t.me/SS07MOVIEHUT'),
-                        InlineKeyboardButton('Update Channel', url='t.me/movie_hut_channel')
+                        InlineKeyboardButton('Join Group ♻️', url='t.me/movies_fanda_official'),
+                        InlineKeyboardButton('Update Channel', url='t.me/movies_fanda_official')
                     ]
                     ]
                 
