@@ -70,7 +70,7 @@ async def filter(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("📞 Contact Admin", url='t.me/KurupDQ')
+                        InlineKeyboardButton("📞 Contact Admin", url='t.me/the_hellcat_10')
                     ]
                 ]
             )
@@ -126,7 +126,7 @@ async def group(client, message):
     if 2 < len(message.text) < 50:    
         btn = []
         search = message.text
-        mo_tech_yt = f"**🗂️ Title:** {search}\n**🎞 Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n** © Uploaded by {message.chat.title}**"
+        mo_tech_yt = f"**🎬 Title: {search}**\n**⭐ Rating: {random.choice(RATING)}**\n**🎭 Genre: {random.choice(GENRES)}**\n**©️ Group: {message.chat.title}🍿**"
         nyva=BOT.get("username")
         if not nyva:
             botusername=await client.get_me()
@@ -136,7 +136,7 @@ async def group(client, message):
         if files:
             for file in files:
                 file_id = file.file_id
-                filename = f"🎬 {get_size(file.file_size)} 🛡 {file.file_name}"
+                filename = f"🎬[{get_size(file.file_size)}] {file.file_name}"
                 btn.append(
                     [InlineKeyboardButton(text=f"{filename}", url=f"https://telegram.dog/{nyva}?start=pr0fess0r_99_-_-_-_{file_id}")]
                 )
@@ -179,9 +179,9 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=result_txt, reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=mo_tech_yt, reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(result_txt, reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(mo_tech_yt, reply_markup=InlineKeyboardMarkup(buttons))
 
     
 def get_size(size):
@@ -286,22 +286,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 return
         elif query.data == "help":
-            buttons = [
-                [
-                    InlineKeyboardButton('🎯Update Channel🎯', url='t.me/PC_linkz'),
-                    InlineKeyboardButton('Source Code', url='https://t.me/AdhavaaBiriyaniKittiyalo')
-                ]
-                ]
+            buttons = [[
+                InlineKeyboardButton('Main Channel', url='t.me/SS7MOVIEHUT'),
+                InlineKeyboardButton('New Release', url='t.me/movie_hut_channel')
+                ],[
+                InlineKeyboardButton('♻️ Join Group ♻️', url='t.me/SS07MOVIEHUT')
+                ]]
             await query.message.edit(text=f"{HELP}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Update Channel', url='t.me/PC_linkz'),
-                    InlineKeyboardButton('Source Code', url=f'{TUTORIAL}')
+                    InlineKeyboardButton('Main Channel', url='t.me/SS7MOVIEHUT'),
+                    InlineKeyboardButton('New Release', url='t.me/movie_hut_channel')
                 ]
                 ]
-            await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text=f"{ABOUT}".format(TUTORIAL), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
         elif query.data.startswith("pr0fess0r_99"):
@@ -321,7 +321,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🖥️ Make Your Own  🖥️', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('Join Group ♻️', url='t.me/SS07MOVIEHUT'),
+                        InlineKeyboardButton('Update Channel', url='t.me/movie_hut_channel')
                     ]
                     ]
                 
@@ -334,7 +335,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     )
         elif query.data.startswith("checksub"):
             if AUTH_CHANNEL and not await is_subscribed(client, query):
-                await query.answer("ഓവർമാർട്ട് ആകരുത് poda😒",show_alert=True)
+                await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒",show_alert=True)
                 return
             ident, file_id = query.data.split("#")
             filedetails = await get_file_details(file_id)
@@ -352,7 +353,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🖥️ How To Own 🖥️', url=f'{TUTORIAL}')
+                        InlineKeyboardButton('Join Group ♻️', url='t.me/movies_fanda_official'),
+                        InlineKeyboardButton('Update Channel', url='t.me/joinchat/IPBtU6ct49FmMWI1')
                     ]
                     ]
                 
@@ -368,4 +370,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "pages":
             await query.answer()
     else:
-        await query.answer("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀next time",show_alert=True)
+        await query.answer("കൌതുകും ലേശം കൂടുതൽ ആണല്ലേ👀",show_alert=True)
