@@ -17,7 +17,10 @@ logger = logging.getLogger(__name__)
 PHOTO = [
     "https://telegra.ph/file/bc7fac1879c927b8ed1ae.jpg",
     "https://telegra.ph/file/df95077dd6e9fb8695e27.jpg",
-    "https://telegra.ph/file/347cf7c8801bae31a99ae.jpg"
+    "https://telegra.ph/file/347cf7c8801bae31a99ae.jpg", 
+    "https://telegra.ph/file/7d8e20f7c3573b0a45f98.jpg",
+    "https://telegra.ph/file/b8547be12d01f37e18226.jpg",
+    "https://telegra.ph/file/d2a3886a8fac403471b37.jpg"
 ]
 
 LOG_CHANNEL = BROADCAST_CHANNEL
