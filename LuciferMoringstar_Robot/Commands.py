@@ -136,8 +136,8 @@ async def start(bot, message):
                         InlineKeyboardButton("😎 About", callback_data="about")
                     ],
                     [
-                        InlineKeyboardButton("1 Dev", url="https://t.me/noufalpowerbot"),
-                        InlineKeyboardButton("2 Dev", url="https://t.me/noufalpowerbot")
+                        InlineKeyboardButton("🅓🅔🅥", url="https://t.me/noufalpowerbot"),
+                        InlineKeyboardButton("🤩Channel  group list😍", url="https://t.me/movies_fanda_official")
                     ],
                     [
                         InlineKeyboardButton("➕ Add Me To Your Group ➕", url="https://t.me/NR_Dq_bot?startgroup=true")
