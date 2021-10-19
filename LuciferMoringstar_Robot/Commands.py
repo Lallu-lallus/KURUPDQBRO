@@ -129,7 +129,7 @@ async def start(bot, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("❔ How To Use Me ❔", url="https://t.me/MovieFandaGroup")
+                        InlineKeyboardButton("❔ How To Use Me ❔", url="https://t.me/NR_dq_botupdates")
                     ],
                     [
                         InlineKeyboardButton("🔍 Search Here", switch_inline_query_current_chat=''),
