@@ -290,7 +290,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "help":
             buttons = [[
                 InlineKeyboardButton('Update Channel', url='t.me/movie_fanda_official'),
-                InlineKeyboardButton('Source Code', url="https://t.me/AdhavaaBiriyaniKittiyalo")
+                InlineKeyboardButton('Source Code', url="t.me/AdhavaaBiriyaniKittiyalo")
                 ],[
                 InlineKeyboardButton('💫Deploy Video💫', url=f'{TUTORIAL}')
                 ]]
@@ -300,7 +300,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             buttons = [
                 [
                     InlineKeyboardButton('Update Channel', url='t.me/movie_fanda_official'),
-                    InlineKeyboardButton('Source Code', url='https://t.me/AdhavaaBiriyaniKittiyalo)
+                    InlineKeyboardButton('Source Code', url='t.me/AdhavaaBiriyaniKittiyalo)
                 ]
                 ]
             await query.message.edit(text=f"{ABOUT}".format(TUTORIAL), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
